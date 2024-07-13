@@ -13,17 +13,18 @@ export default defineUserConfig({
   theme: defaultTheme({
 
     logo: '/favicon.ico',
- 
+
     navbar: [
-      '/', 
+      '/',
       '/python',
       'java',
       {
         text: '机器学习',
-        prefix:'/ml',
-        children:['a','b']
+        prefix: '/ml',
+        children: ['a', 'b']
       }
     ],
 
-  bundler: viteBundler(),
+    bundler: viteBundler(),
+  })
 })
