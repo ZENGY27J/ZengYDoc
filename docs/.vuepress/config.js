@@ -9,10 +9,16 @@ export default defineUserConfig({
   description: 'live and life',
 
   // base: '/vuepress-starter/',
+  head: [
+    [
+      'link',
+      { rel: 'icon', href: '/favicon.ico' } // 如果你使用的是 .ico 格式的 favicon 文件
+    ]
+  ],
 
   theme: defaultTheme({
 
-    logo: 'https://vuejs.press/images/hero.png',
+    logo: '/favicon.ico',
  
     navbar: [
       '/', 
@@ -24,6 +30,8 @@ export default defineUserConfig({
         children:['a','b']
       }
     ],
+    search: false,
+    searchMaxSuggestions: 10
   }),
 
   bundler: viteBundler(),
