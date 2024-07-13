@@ -8,7 +8,7 @@ export default defineUserConfig({
   title: 'ZengY\'s document',
   description: 'live and life',
 
-  // base: '/vuepress-starter/',
+  base: '/vuepress-starter/',
   head: [
     [
       'link',
