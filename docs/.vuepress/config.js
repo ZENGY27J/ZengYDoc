@@ -9,22 +9,29 @@ export default defineUserConfig({
   description: 'live and life',
 
   base: '/vuepress-starter/',
+  head: [
+    [
+      'link',
+      { rel: 'icon', href: '/favicon.ico' } // 如果你使用的是 .ico 格式的 favicon 文件
+    ]
+  ],
 
   theme: defaultTheme({
 
     logo: '/favicon.ico',
-
+ 
     navbar: [
-      '/',
+      '/', 
       '/python',
       'java',
       {
         text: '机器学习',
-        prefix: '/ml',
-        children: ['a', 'b']
+        prefix:'/ml',
+        children:['a','b']
       }
     ],
+    
+  }),
 
-    bundler: viteBundler(),
-  })
+  bundler: viteBundler(),
 })
