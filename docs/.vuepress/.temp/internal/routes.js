@@ -8,20 +8,3 @@ export const routes = Object.fromEntries([
   ["/ml/a.html", { loader: () => import(/* webpackChunkName: "ml_a.html" */"D:/zengyBlog/vuepress-starter/docs/.vuepress/.temp/pages/ml/a.html.js"), meta: {"title":"机器学习基础"} }],
   ["/404.html", { loader: () => import(/* webpackChunkName: "404.html" */"D:/zengyBlog/vuepress-starter/docs/.vuepress/.temp/pages/404.html.js"), meta: {"title":""} }],
 ]);
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateRoutes) {
-    __VUE_HMR_RUNTIME__.updateRoutes(routes)
-  }
-  if (__VUE_HMR_RUNTIME__.updateRedirects) {
-    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ routes, redirects }) => {
-    __VUE_HMR_RUNTIME__.updateRoutes(routes)
-    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
-  })
-}
